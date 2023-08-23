@@ -1,0 +1,17 @@
+agregar_stock Uvas;50;BodegaX
+vender_producto Fresas;20;BodegaX
+crear_producto Melones;15;BodegaZ
+vender_producto Sandías;40;BodegaA
+agregar_stock Papayas;8;BodegaA
+vender_producto Peras;8;BodegaA
+agregar_stock Kiwis;25;BodegaE
+vender_producto Duraznos;85;BodegaA
+vender_producto Naranjas;80;BodegaE
+agregar_stock Kiwis;40;BodegaE
+vender_producto Uvas;40;BodegaX
+vender_producto Duraznos;25;BodegaI
+agregar_stock Fresas;15;BodegaZ
+vender_producto Mangos;3;BodegaY
+vender_producto Papayas;1;BodegaH
+vender_producto Melones;15;BodegaE
+vender_producto Sandías;35;BodegaF
