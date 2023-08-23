@@ -84,7 +84,8 @@ Si los valores no se pueden convertir correctamente a números, se maneja la exc
 
 
 
-![](Aspose.Words.adde0b31-c594-467d-af44-a33747c21056.013.png)Imprime mensajes de confirmación y finaliza la función después de procesar todas las líneas del archivo. Si el archivo no se encuentra, maneja la excepción y muestra un mensaje indicando que el archivo no fue encontrado.
+![](Aspose.Words.adde0b31-c594-467d-af44-a33747c21056.013.png)
+Imprime mensajes de confirmación y finaliza la función después de procesar todas las líneas del archivo. Si el archivo no se encuentra, maneja la excepción y muestra un mensaje indicando que el archivo no fue encontrado.
 
 **Funcion cargar\_instrucciones\_movimientos**
 
@@ -97,7 +98,6 @@ Elimina espacios en blanco al principio y al final de la línea. Si la línea es
 Verifica si el nombre del producto existe en el inventario. Si no existe, muestra un mensaje de error y continúa con la siguiente línea. Si existe pero la ubicación no coincide, muestra un mensaje de error y continúa con la siguiente línea. Si la instrucción es "agregar\_stock", agrega la cantidad especificada al producto en el inventario. Si la instrucción es "vender\_producto", verifica si hay suficiente cantidad de producto en el inventario para vender. Si hay suficiente, resta la cantidad especificada del producto en el inventario. Si la instrucción no se reconoce, muestra un mensaje de error. Si el archivo no se encuentra, maneja la excepción y muestra un mensaje indicando que el archivo no fue encontrado.
 
 ![](Aspose.Words.adde0b31-c594-467d-af44-a33747c21056.016.png)
-
 
 
 **Funcion crear\_informe\_inventario**
