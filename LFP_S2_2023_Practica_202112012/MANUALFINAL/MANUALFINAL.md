@@ -85,6 +85,7 @@ Si los valores no se pueden convertir correctamente a números, se maneja la exc
 
 
 ![](Aspose.Words.adde0b31-c594-467d-af44-a33747c21056.013.png)
+
 Imprime mensajes de confirmación y finaliza la función después de procesar todas las líneas del archivo. Si el archivo no se encuentra, maneja la excepción y muestra un mensaje indicando que el archivo no fue encontrado.
 
 **Funcion cargar\_instrucciones\_movimientos**
