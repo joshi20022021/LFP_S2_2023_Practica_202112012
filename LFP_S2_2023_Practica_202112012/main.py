@@ -42,10 +42,26 @@ def cargar_instrucciones_movimientos(inventario):
             lineas = archivo.readlines()
             
             for linea in lineas:
-                instruccion, parametros = linea.strip().split(' ', 1)
-                if instruccion == 'agregar_stock':
-                    nombre, cantidad_str, ubicacion = parametros.split(';')
+                linea = linea.strip()
+                if not linea:  # Ignorar líneas vacías
+                    continue
+                
+                instruccion, detalles = linea.split(' ', 1)
+                
+                # Verificar si hay suficientes componentes en los detalles
+                detalles_partes = detalles.split(';')
+                if len(detalles_partes) < 3:
+                    print(f"Error en el formato de línea: {linea}. Ignorando entrada.")
+                    continue
+                
+                try:
+                    nombre, cantidad_str, ubicacion = detalles_partes
                     cantidad = float(cantidad_str)
+                except ValueError:
+                    print(f"Error en el formato de detalles en línea: {linea}. Ignorando entrada.")
+                    continue
+                
+                if instruccion == 'agregar_stock':
                     if nombre in inventario:
                         if ubicacion == inventario[nombre]['ubicacion']:
                             inventario[nombre]['cantidad'] += cantidad
@@ -55,8 +71,6 @@ def cargar_instrucciones_movimientos(inventario):
                     else:
                         print(f"No se pudo agregar stock de {nombre}. Producto no existe en el inventario.")
                 elif instruccion == 'vender_producto':
-                    nombre, cantidad_str, ubicacion = parametros.split(';')
-                    cantidad = float(cantidad_str)
                     if nombre in inventario:
                         if ubicacion == inventario[nombre]['ubicacion']:
                             if cantidad <= inventario[nombre]['cantidad']:
